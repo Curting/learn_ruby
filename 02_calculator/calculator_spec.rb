@@ -73,27 +73,45 @@ describe "sum" do
   end
 end
 
-# Extra Credit Test-Driving Bonus:
-# once the above tests pass,
-# write tests and code for the following:
+# BONUS
+# * `multiply` which multiplies two numbers together
+# * `power` which raises one number to the power of another number
+# * `[factorial](http://en.wikipedia.org/wiki/Factorial)`
 
-describe "#multiply" do
+describe "multiply" do
+  it "multipiles two numbers in an array" do
+    expect(multiply([2, 4])).to eq(8)
+  end
 
-  it "multiplies two numbers"
-
-  it "multiplies several numbers"
-  
+  it "multiplies several numbers in an array" do
+    expect(multiply([2, 4, 6, 8, 10])).to eq(3840)
+  end
 end
 
-describe "#power" do
-  it "raises one number to the power of another number"
+describe "power" do
+  it "raises one number to the power of another number" do
+    expect(power(4, 8)).to eq(65536)
+  end
 end
 
-# http://en.wikipedia.org/wiki/Factorial
-describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+describe "factorial" do
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+
+  it "computes the factorial of 2" do
+    expect(factorial(2)).to eq(2)
+  end
+
+  it "computes the factorial of 5" do
+    expect(factorial(5)).to eq(120)
+  end
+
+  it "computes the factorial of 10" do
+    expect(factorial(10)).to eq(3628800)
+  end
 end
