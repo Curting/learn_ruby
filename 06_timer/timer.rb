@@ -10,12 +10,8 @@ class Timer
 
   	# Find hour, min and seconds. Reduce time by each time-element. 
   	hour = time / 3600
-  	time -= hour * 3600
-
-  	min = time / 60
-  	time -= min * 60
-
-  	sec = time % 60
+  	min = (time % 3600) / 60
+    sec = (time % 3600) % 60
 
   	# Make sure that 1 become :01 and 12 become :12 etc.
   	if hour.between?(0, 9) then hour = "0#{hour}" end
